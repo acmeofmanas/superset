@@ -1,7 +1,7 @@
-FROM repo2a.cld.uat.dbs.com:5000/rhscl/python-35-rhel7
+FROM registry:5000/rhscl/python-35-rhel7
 
 # DBS env
-ARG PIP_INDEX=https://nexuscimgmt.sgp.dbs.com:8443/nexus/repository/pypi-all/simple
+ARG PIP_INDEX=https://nexus.com:8443/nexus/repository/pypi-all/simple
 ENV PIP_INDEX $PIP_INDEX
 ENV LD_LIBRARY_PATH=/opt/rh/rh-python35/root/usr/lib64/
 ENV GUNICORN_BIND=0.0.0.0:8088 \
